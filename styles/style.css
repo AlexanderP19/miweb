@@ -51,6 +51,10 @@ header {
     justify-content: center;
 }
 
+#tables-container>img{
+    width: clamp(200px, 200px, 500px);
+}
+
 .logo>img {
     width: 40px;
     border-radius: 50%;
