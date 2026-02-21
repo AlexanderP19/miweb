@@ -197,7 +197,7 @@ main {
 /*tabla de estadisticas 2017/2018*/
 .main-title {
     text-align: center;
-    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(1.2rem, 5vw, 3rem);
     letter-spacing: 3px;
     color: #f05a28;
     margin-bottom: 40px;
