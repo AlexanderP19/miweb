@@ -7,6 +7,12 @@ bars.addEventListener('click', () => {
     overlay.classList.toggle('active');
 });
 
+document.addEventListener('click', (e) => {
+    if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && !bars.contains(e.target)) {
+        sidebar.classList.remove('active');
+    }
+});
+
 overlay.addEventListener('click', () => {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
