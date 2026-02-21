@@ -45,6 +45,12 @@ header {
     color: #5e5e5e;
 }
 
+#tables-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo>img {
     width: 40px;
     border-radius: 50%;
@@ -149,7 +155,7 @@ header {
 main {
     width: 100%;
     background-color: white;
-    padding: 2rem 5rem;
+    
 }
 
 .titulo-celebridades>h1 {
@@ -167,6 +173,8 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+    padding: 2rem 5rem;
+    margin: auto;
 }
 
 .leyendas {
@@ -271,6 +279,135 @@ tbody tr:hover {
 
 /*tabla de estadisticas 2017/2018*/
 
+.container-carrusel{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+.carousel{
+    margin: 100px auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow: hidden; /* mejor que auto para este efecto */
+    position: relative; /* IMPORTANTE */
+}
+
+/* 🔥 Difuminado izquierdo */
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px; /* ancho del efecto */
+    height: 100%;
+    z-index: 2;
+
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,1) 0%,
+        rgba(255,255,255,0) 100%
+    );
+}
+
+/* 🔥 Difuminado derecho */
+.carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+
+    background: linear-gradient(
+        to left,
+        rgba(0,0,0,1) 0%,
+        rgba(255,255,255,0) 100%
+    );
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 1em;
+    animation: spin 15s infinite linear;
+    padding-right: 1em;
+}
+
+.card{
+    width: 100%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 350px;
+    flex: 0 0 5em;
+    background: cornflowerblue;
+    font-size: 3rem;
+    border-radius: .2em;
+    position: relative;
+    position: relative;
+    overflow: hidden; /* importante */
+}
+
+/* 👇 AQUÍ ESTÁ EL EFECTO */
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 50%,
+        rgba(0, 0, 0, 0.6) 90%,
+        rgba(0, 0, 0, 0) 100%
+    );
+
+    border-radius: .2em;
+}
+
+.card > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius: .2em;
+}
+
+.card > h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+    transition: all 300ms ease;
+}
+
+
+@keyframes spin{
+    from{
+        translate: 0;
+    }
+
+    to{
+        translate: -100%;
+    }
+}
 @media screen and (max-width: 1020px) {
     .hero {
         background-image: none;
