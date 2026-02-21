@@ -1,0 +1,13 @@
+.header_menu>nav>ul>li>a{
+    text-decoration: none;
+    color: #222222;
+    transition: 0.3s;
+}
+
+.header_menu>nav>ul>li>a:hover {
+    color: #F47C20;
+}
+
+.header_menu>nav>ul>li>a.active {
+    color: #F47C20;
+}

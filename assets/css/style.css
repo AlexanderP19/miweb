@@ -496,6 +496,7 @@ tbody tr:hover {
     }
 
     .sidebar_menu>nav>ul>li {
+        font-family: "Bebas Neue", sans-serif;
         border-radius: 0.5em;
     }
 
