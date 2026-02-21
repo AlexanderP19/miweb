@@ -164,7 +164,7 @@ main {
 
 .container-leyendas {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
