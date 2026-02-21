@@ -63,7 +63,7 @@ header {
     font-size: 1.1rem;
 }
 
-.header_menu>nav>ul>li>a:hover{
+.header_menu>nav>ul>li>a:hover {
     color: #F47C20;
 }
 
@@ -97,10 +97,11 @@ header {
 /*-----------------------------*/
 .hero {
     height: 100vh;
-    background-image: 
-        linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.2)),
-        url("../img/uno.webp"); /* 👈 aquí pones tu imagen */
-        
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.2)),
+        url("../img/uno.webp");
+    /* 👈 aquí pones tu imagen */
+
     background-size: cover;
     background-position: center;
     display: flex;
@@ -142,36 +143,48 @@ header {
     background: white;
     color: black;
 }
+
 /*-----------------------------*/
 
-main{
+main {
+    background-color: white;
     padding: 2rem 5rem;
 }
 
-.container-leyendas{
+.titulo-celebridades>h1 {
+
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.container-leyendas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.leyendas{
+.leyendas {
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.leyendas img{
+.leyendas img {
     width: 100%;
     object-fit: cover;
 }
 
-.leyendas > h2{
+.leyendas>h2 {
     margin: 0.2em 0.5em;
     font-family: "Bebas Neue", sans-serif;
 }
 
-.leyendas > li{
+.leyendas>li {
     margin: 0.2em 1.7em;
     list-style: disc;
     margin-bottom: 1rem;
@@ -179,51 +192,65 @@ main{
 }
 
 /*tabla de estadisticas 2017/2018*/
-.container {
-    width: 90%;
-    margin: 40px auto;
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #f05a28;
+    margin-bottom: 40px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
-.title {
-    text-align: center;
-    color: #e10600;
-    font-size: 40px;
-    margin-bottom: 40px;
+.container-standing {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .group-title {
     margin-top: 40px;
-    font-size: 24px;
-    border-left: 5px solid #e10600;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-left: 5px solid #f05a28;
     padding-left: 10px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
     background-color: #111827;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 thead {
     background-color: #1f2937;
 }
 
-th, td {
-    padding: 12px;
+th {
+    padding: 14px;
     text-align: center;
+    font-size: 13px;
+    color: #9ca3af;
+    letter-spacing: 1px;
 }
 
-th {
-    color: #e10600;
-    font-weight: bold;
+td {
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
 }
 
 tbody tr {
-    border-bottom: 1px solid #2d3748;
-    transition: 0.3s;
+    border-bottom: 1px solid #1f2937;
+    transition: background 0.3s ease;
 }
 
 tbody tr:hover {
@@ -232,9 +259,44 @@ tbody tr:hover {
 
 .rank {
     font-weight: bold;
-    color: #eab308;
+    color: white;
 }
+
+.top-team {
+    background-color: rgba(240, 90, 40, 0.1);
+}
+
 /*tabla de estadisticas 2017/2018*/
+
+@media screen and (max-width: 1020px) {
+    .hero {
+        background-image: none;
+        /* 🔥 elimina imagen y gradient */
+        background-color: black;
+        /* fondo sólido */
+        justify-content: center;
+        /* centra horizontal */
+        text-align: center;
+        /* centra texto */
+        padding: 0 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        margin: 0 auto;
+    }
+}
 
 @media screen and (max-width: 1300px) {
     .bodys {
@@ -299,9 +361,9 @@ tbody tr:hover {
 
 }
 
-@media screen and (max-width: 500px){
-    .header_buscar{
+@media screen and (max-width: 500px) {
+    .header_buscar {
         display: none;
     }
-    
+
 }
