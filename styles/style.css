@@ -147,6 +147,8 @@ header {
 /*-----------------------------*/
 
 main {
+    width: 100%;
+    max-width: 1200px;
     background-color: white;
     padding: 2rem 5rem;
 }
