@@ -17,3 +17,16 @@ overlay.addEventListener('click', () => {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
 });
+
+const sidebarTop = sidebar.offsetTop;
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY >= sidebarTop) {
+        sidebar.classList.add("fixed");
+    } else {
+        sidebar.classList.remove("fixed");
+    }
+
+});
+
