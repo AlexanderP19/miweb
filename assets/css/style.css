@@ -59,7 +59,7 @@ header {
 
 .logo>img {
     width: 40px;
-    filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.7));
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7));
 }
 
 .header_menu>nav>ul {
